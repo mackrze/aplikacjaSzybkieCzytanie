@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
                         applicationContext, "Authentication OK.",
                         Toast.LENGTH_LONG
                     ).show()
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, MenuActivity::class.java)
                     this.startActivity(intent)
                 } else {
                     Toast.makeText(

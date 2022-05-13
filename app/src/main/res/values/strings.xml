@@ -11,5 +11,12 @@
     <string name="regView2">Podaj dane</string>
     <string name="regBtn">Zarejestruj</string>
     <string name="cmsn">Tu będzie menu główne</string>
+    <string name="playBtn">GRAJ!</string>
+    <string name="resultsBtn">Moje wyniki</string>
+    <string name="logOutBtn">Wyloguj</string>
+    <string name="modeView">Wybierz ustawienia</string>
+    <string name="mode">Tryb</string>
+    <string name="velocidadView">Prędkość tekstu</string>
+    <string name="time">Czas ćwiczenia</string>
 
 </resources>
