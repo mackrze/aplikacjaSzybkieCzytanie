@@ -83,7 +83,7 @@ class ModeSettingsActivity : AppCompatActivity(), (TextModel) -> Unit {
         val mode:String = modeSpinner.selectedItem as String
         val time:String = timeSpinner.selectedItem as String
         val vel:String = velSpinner.selectedItem as String
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, ReadingActivity::class.java)
         intent.putExtra("mode", mode)
         intent.putExtra("time", time)
         intent.putExtra("vel", vel)

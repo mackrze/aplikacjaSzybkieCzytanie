@@ -18,5 +18,8 @@
     <string name="mode">Tryb</string>
     <string name="velocidadView">Prędkość tekstu</string>
     <string name="time">Czas ćwiczenia</string>
-
+    <string name="rsvp">RSVP</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 </resources>
