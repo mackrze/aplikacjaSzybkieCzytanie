@@ -1,4 +1,4 @@
-package edu.ib.aplikacjaszybkieczytanie
+package edu.ib.aplikacjaszybkieczytanie.model
 
 data class TextModel(
 
@@ -7,7 +7,5 @@ data class TextModel(
     val contents: String = "",
     val chapter: String = "",
     val id: Long =0
-
-
 
 )

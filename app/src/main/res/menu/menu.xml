@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/showInfoBtn"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_info"
+        android:title="Info"
+        android:onClick="showInfoOnClick"/>
+
+
+
+
+
+</menu>

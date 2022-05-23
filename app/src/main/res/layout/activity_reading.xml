@@ -8,64 +8,82 @@
     android:orientation="vertical"
     tools:context=".ReadingActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="394dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="101dp"
-        android:background="#000000"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="@color/colorPrimary"
-        android:textSize="70px"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".85">
+
+        <TextView
+            android:id="@+id/textViewRsvp"
+            android:layout_width="394dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="201dp"
+            android:background="#00FFFFFF"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.746" />
+
+        <TextView
+            android:id="@+id/textViewNormal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:background="#00FFFFFF"
+            android:focusable="auto"
+            android:focusableInTouchMode="false"
+            android:focusedByDefault="false"
+            android:freezesText="false"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/start_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="89dp"
+        android:layout_marginHorizontal="150dp"
         android:onClick="startBtnClick"
         android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/stop_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/milliseconds"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="49dp"
-        android:backgroundTint="#EAEAEA"
-        android:ems="10"
-        android:hint="time for 1 word in milliseconds"
-        android:inputType="number" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRsvp"
+        android:background="@drawable/button_green_dark"
+        />
 
     <Button
         android:id="@+id/stop_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginHorizontal="150dp"
+        android:background="@drawable/button_red"
         android:onClick="stopBtnClick"
         android:text="@string/stop"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/start_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRsvp" />
 
 </LinearLayout>
