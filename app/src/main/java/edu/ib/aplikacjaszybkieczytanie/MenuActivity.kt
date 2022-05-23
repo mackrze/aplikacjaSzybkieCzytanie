@@ -14,7 +14,7 @@ class MenuActivity : AppCompatActivity() {
 
     fun onClickPlayBtn(view: View)
     {
-        val intent = Intent(this, ModeSettingsActivity::class.java)
+        val intent = Intent(this, TextsListActivity::class.java)
         this.startActivity(intent)
     }
 

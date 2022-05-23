@@ -22,6 +22,17 @@ class FirebaseRepo
             .collection("texts").orderBy("id", Query.Direction.ASCENDING).get()
 
     }
+    fun getRandText(id:Long): Task<QuerySnapshot>{
+        return firebaseFirestore
+            .collection("texts").whereEqualTo("id",id ).get()
+    }
+
+    fun getTextByTitleChapter(title:String, chapter:String): Task<QuerySnapshot>{
+        return firebaseFirestore
+            .collection("texts").whereEqualTo("title",title)
+            .whereEqualTo("chapter",chapter)
+            .get()
+    }
 
 
 }

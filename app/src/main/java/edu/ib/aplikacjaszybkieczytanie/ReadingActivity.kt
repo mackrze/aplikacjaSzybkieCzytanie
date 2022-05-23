@@ -2,14 +2,18 @@ package edu.ib.aplikacjaszybkieczytanie
 
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_reading.*
 
 
 class ReadingActivity : AppCompatActivity() {
+
+
+    var contents:String = ""
+
+
 
     @Volatile
     private var stopThread = false
@@ -18,6 +22,17 @@ class ReadingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reading)
+
+        //tu beda te tryby i ustawienia wybrane w oknie ModeSettingsActivity przez uzytkownika, narazie rób na twardo
+//        val mode = intent.getStringExtra("mode")
+//        val time =intent.getStringExtra("time")
+//        val vel =intent.getStringExtra("vel")
+
+        //w zmiennej contents masz tekst utworu wybranego przez użytkownika w oknie TextsListActivity
+        contents =intent.getStringExtra("contents")
+
+
+
     }
 
     fun startBtnClick(view: View) {
@@ -39,8 +54,12 @@ class ReadingActivity : AppCompatActivity() {
 
     private fun showText(ms: Int) {
         //val text = "To bedzie jakis bardzo długi tekst który będzie wyświeltany na ekranie"
-        val text = "Rok 1647 był to dziwny rok, w którym rozmaite znaki na niebie i ziemi zwiastowały jakoweś klęski i nadzwyczajne zdarzenia.Współcześni kronikarze wspominają, iż z wiosny szarańcza w niesłychanej ilości wyroiła się z Dzikich Pól i zniszczyła zasiewy i trawy, co było przepowiednią napadów tatarskich. Latem zdarzyło się wielkie zaćmienie słońca, a wkrótce potem kometa pojawiła się na niebie. W Warszawie widywano też nad miastem mogiłę i krzyż ognisty w obłokach; odprawiano więc posty i dawano jałmużny, gdyż niektórzy twierdzili, że zaraza spadnie na kraj i wygubi rodzaj ludzki. Nareszcie zima nastała tak lekka, że najstarsi ludzie nie pamiętali podobnej. W południowych województwach lody nie popętały wcale wód, które podsycane topniejącym każdego ranka śniegiem wystąpiły z łożysk i pozalewały brzegi. Padały częste deszcze. Step rozmókł i zmienił się w wielką kałużę, słońce zaś w południe dogrzewało tak mocno, że — dziw nad dziwy! — w województwie bracławskim i na Dzikich Polach zielona ruń okryła stepy i rozłogi już w połowie grudnia. Roje po pasiekach poczęły się burzyć i huczeć, bydło ryczało po zagrodach. Gdy więc tak porządek przyrodzenia zdawał się być wcale odwróconym, wszyscy na Rusi, oczekując niezwykłych zdarzeń, zwracali niespokojny umysł i oczy szczególniej ku Dzikim Polom, od których łatwiej niźli skądinąd mogło się ukazać niebezpieczeństwo."
+//        val text = "Rok 1647 był to dziwny rok, w którym rozmaite znaki na niebie i ziemi zwiastowały jakoweś klęski i nadzwyczajne zdarzenia.Współcześni kronikarze wspominają, iż z wiosny szarańcza w niesłychanej ilości wyroiła się z Dzikich Pól i zniszczyła zasiewy i trawy, co było przepowiednią napadów tatarskich. Latem zdarzyło się wielkie zaćmienie słońca, a wkrótce potem kometa pojawiła się na niebie. W Warszawie widywano też nad miastem mogiłę i krzyż ognisty w obłokach; odprawiano więc posty i dawano jałmużny, gdyż niektórzy twierdzili, że zaraza spadnie na kraj i wygubi rodzaj ludzki. Nareszcie zima nastała tak lekka, że najstarsi ludzie nie pamiętali podobnej. W południowych województwach lody nie popętały wcale wód, które podsycane topniejącym każdego ranka śniegiem wystąpiły z łożysk i pozalewały brzegi. Padały częste deszcze. Step rozmókł i zmienił się w wielką kałużę, słońce zaś w południe dogrzewało tak mocno, że — dziw nad dziwy! — w województwie bracławskim i na Dzikich Polach zielona ruń okryła stepy i rozłogi już w połowie grudnia. Roje po pasiekach poczęły się burzyć i huczeć, bydło ryczało po zagrodach. Gdy więc tak porządek przyrodzenia zdawał się być wcale odwróconym, wszyscy na Rusi, oczekując niezwykłych zdarzeń, zwracali niespokojny umysł i oczy szczególniej ku Dzikim Polom, od których łatwiej niźli skądinąd mogło się ukazać niebezpieczeństwo."
+//        val textSplit = text.split(" ".toRegex()).toTypedArray()
+        val text = contents
         val textSplit = text.split(" ".toRegex()).toTypedArray()
+
+
         val handler = Handler()
         var count = 0
 
