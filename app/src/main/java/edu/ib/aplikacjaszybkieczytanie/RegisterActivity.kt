@@ -1,17 +1,27 @@
 package edu.ib.aplikacjaszybkieczytanie
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.customview.customView
 import com.google.firebase.auth.FirebaseAuth
+import edu.ib.aplikacjaszybkieczytanie.firebase.FirebaseRepo
 
 class RegisterActivity : AppCompatActivity() {
 
     private var mAuth: FirebaseAuth? = null
+    private val firebaseRepo: FirebaseRepo =
+        FirebaseRepo()
     var signUp: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +30,8 @@ class RegisterActivity : AppCompatActivity() {
         signUp = findViewById<View>(R.id.registerBtn) as Button
 
     }
+
+
 
     fun onClickSignUpBtn(view: View) {
         val edtEmail = findViewById<View>(R.id.usernameText) as EditText
@@ -36,26 +48,49 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         } else {
-            mAuth!!.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                    this
-                ) { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(
-                            applicationContext, "Account created",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        val user = mAuth!!.currentUser
-                    } else {
-                        Toast.makeText(
-                            applicationContext, "Account was not created",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                }
+            firebaseRepo.reg(email,password,applicationContext)
         }
+    }
 
 
+
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater as MenuInflater
+        inflater.inflate(R.menu.menu2,menu)
+        return true
+    }
+
+
+
+    fun showInfoOnClick(item: MenuItem) {
+        Toast.makeText(
+            applicationContext, "Info clicked",
+            Toast.LENGTH_LONG
+        ).show()
+
+        showInfoDialog()
+
+    }
+
+    private fun showInfoDialog() {
+        val dialog = MaterialDialog(this)
+            .noAutoDismiss()
+            .customView(R.layout.layout_dialog_info)
+
+
+        dialog.findViewById<TextView>(R.id.ok_button)
+            .setOnClickListener {
+                dialog.dismiss()
+            }
+
+        dialog.show()
+    }
+
+    fun backHomeOnClick(item: MenuItem) {
+        //val intent = Intent(this, LoginActivity::class.java)
+        finish()
 
     }
 }

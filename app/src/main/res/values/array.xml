@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="modeItems">
-    <item>RSVP</item>
 
-</string-array>
+        <item>RSVP</item>
+        <item>Point</item>
+
+
+    </string-array>
     <string-array name="velItems">
         <item>1s</item>
         <item>2s</item>

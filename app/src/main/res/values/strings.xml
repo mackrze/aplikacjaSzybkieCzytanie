@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Aplikacja</string>
-    <string name="helloText">Flash Reading App</string>
+    <string name="app_name">Flash Read</string>
+    <string name="helloText">Aplikacja Flash Read</string>
     <string name="signIn">Zaloguj się</string>
     <string name="userView">E-mail</string>
     <string name="passView">Hasło</string>
@@ -16,7 +16,7 @@
     <string name="logOutBtn">Wyloguj</string>
     <string name="modeView">Wybierz ustawienia</string>
     <string name="mode">Tryb</string>
-    <string name="velocidadView">Prędkość tekstu</string>
+    <string name="velocidadView">Czas wyświetlania jednego słowa</string>
     <string name="time">Czas ćwiczenia</string>
     <string name="rsvp">RSVP</string>
     <string name="next">Next</string>
@@ -24,4 +24,28 @@
     <string name="stop">Stop</string>
     <string name="listView">Wybierz tekst</string>
     <string name="nextBtn">Dalej</string>
-</resources>
+    <string name="rsvpPlus">RsvpPlus</string>
+    <string name="optionX">Option X</string>
+    <string name="numBarofWordsView">Liczba słów naraz</string>
+    <string name="minNumBar">2</string>
+    <string name="maxNumBar">6</string>
+    <string name="barTimeView">Czas </string>
+    <string name="minTimePerWord">10ms</string>
+    <string name="numOfLettTextView">Liczba podświetlonych liter</string>
+    <string name="minNumOfWords">1</string>
+    <string name="numOfJumpReserve">Odstęp literowy</string>
+    <string name="minNumOfJumpReserve">0</string>
+    <string name="okBtn">OK!</string>
+    <string name="infoRating">Udało Ci się ukończyć grę. By nauka była efektywna, ćwicz codziennie.</string>
+    <string name="congrats">GRATULACJĘ</string>
+    <string name="rateYourself">Oceń jak sobie poradziłeś</string>
+    <string name="resumeBtn">Podsumowanie</string>
+    <string name="nextPlayBtn">Następna gra</string>
+
+    <string name="infoFirstLine">Aplikacja ma na celu pomóc w nacue szybkiego czytania, oraz rozumieniu teksu. Do Twojego użytku przekazujemy kilka trybów czytania tekstu wraz z możliwością zmiany kilku parametrów.
+        Przeciętny człowiek czyta z prędkością od 200 do 280 słów na minutę. Wartość ta oczywiście zależy od kilku czynników na przykład wieku, ale i regularności czytnania. Nasze oko jest zbudowane w sposób umożliwiający skupienie tylko na małym obszarze, co prezentuje poniższa ilustracja.</string>
+    <string name="infoSecondLine">Jednak proces czytania jest dość skomplikowany i nie ogranicza się tylko do skupienia na jednym słowie, ale do płynnego przechodzenia między słowami, rozumienia ich oraz sładania w logiczne zdanie. Mając to na uwadze przygotowaliśmy dla Państwa tryby zmieniąjące czynniki wpływające na proces czytania. </string>
+    <string name="infoRsvpLine">Tryb RSVP polega na wyświetlaniu pojedycznego słowa, lub kilku w trybie RSVP Plus. Ogranicza to możliwość widzenia peryferyjnego, czyli fragmetnów tekstu poza naszym miejscem skupienia. Jednak niweluje potrzebę ruchu gałek ocznych w celu przejścia od słowa do słowa. Te ruchy, zwane sakadowymi, zajmują od 15-35 milisenkud po przeczytaniu krótkich znanych słów do nawet 100-150 milisekund w przypadku długich,skomplikowanych fonetycznie lub po prostu pierwszy raz widzianych słów. Całkowite wyeliminowanie potrzeby skupiana się tym procesie pozwala zwiększyć szybkość czytania do zawrotnych prędkości nawet 500-600 słów na minutę. Jednak nakłada pewne ograniczenia związane z rozumieniem tekstu poprzez ograniczenie wspomianego widzenia peryferyjnego.</string>
+    <string name="point">Point</string>
+    <string name="infoPointLine">Metoda point to przeciwieństwo trybu RSVP. Tutaj wyświetlany jest cały tekst z przesuwającym się zanznaczeniem jednego słowa wraz z postępującym procesem czytania. W tym przypadku nie ma pominięcia ruchów sakadowych jednak umożliwone jest wiedzenie peryferyjne. Ma to swój plus, jako że fakt iż nie skupiamy się na danym słowie nie znaczy żę nasz mózg je pomija. Widzenie słów w sąsiedztwie do słowa na którym obecnie skupiamy nasz wzrok wpływa pozytywnie na rozumienie całościowe tekstu i składanie zdań w logiczną całość. Dodatkowo dodana jest możliwość utrudniena czytana poprzez rozmazanie aktualnie nie czytanego słowa opcją Blur, lub całkowite uniemożliwenie czytania innych słow poprzez opcję X. </string>
+    </resources>
